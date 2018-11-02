@@ -1,25 +1,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="#d74444"
-    >
+    android:gravity="center"
+    android:orientation="vertical">
 
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/imgEncuesta"
-        />
+        android:background="@drawable/imgencuesta" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center"
-
-
+        android:orientation="horizontal"
         >
 
 
@@ -27,17 +23,15 @@
             android:id="@+id/btn_nuevoRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nuevo Registro"
-            />
+            android:onClick="onClick_Encuesta"
+            android:text="Nuevo Registro" />
 
         <Button
             android:id="@+id/btn_verEstadistica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ver Estadistica"
-            />
-
-
+            android:onClick="onClick_Estadisticas"
+            android:text="Ver Estadistica" />
 
 
     </LinearLayout>
