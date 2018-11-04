@@ -1,8 +1,184 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlanco"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:padding="8dp"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/style_titulos"
+                android:text="ESTADISTICAS" />
+
+            <!-- PREGUNTA 1-->
+            <TextView
+                android:id="@+id/pregunta1"
+                style="@style/style_preguntas"
+                android:text="Primera pregunta" />
+
+            <LinearLayout style="@style/style_LinearAgrupa">
+
+                <TextView
+                    android:id="@+id/estadis1A"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 1A" />
+
+                <TextView
+                    android:id="@+id/estadis1B"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 1B" />
+
+                <TextView
+                    android:id="@+id/estadis1C"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 1C" />
+
+                <TextView
+                    android:id="@+id/estadis1D"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 1D" />
+
+            </LinearLayout>
 
 
+            <!--PREGUNTA 2-->
+            <TextView
+                android:id="@+id/pregunta2"
+                style="@style/style_preguntas"
+                android:text="Segunda pregunta" />
+
+            <LinearLayout style="@style/style_LinearAgrupa">
+
+                <TextView
+                    android:id="@+id/estadis2A"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 2A" />
+
+                <TextView
+                    android:id="@+id/estadis2B"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 2B" />
+
+                <TextView
+                    android:id="@+id/estadis2C"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 2C" />
+
+                <TextView
+                    android:id="@+id/estadis2D"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 2D" />
+
+            </LinearLayout>
+
+
+            <!--TERCERA PREGUNTA-->
+            <TextView
+                android:id="@+id/pregunta3"
+                style="@style/style_preguntas"
+                android:text="Tercera pregunta" />
+
+            <LinearLayout style="@style/style_LinearAgrupa">
+
+                <TextView
+                    android:id="@+id/estadis3A"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 3A" />
+
+                <TextView
+                    android:id="@+id/estadis3B"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 3B" />
+
+                <TextView
+                    android:id="@+id/estadis3C"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 3C" />
+
+                <TextView
+                    android:id="@+id/estadis3D"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 3D" />
+            </LinearLayout>
+
+
+            <!--CUARTA PREGUNTA-->
+            <TextView
+                android:id="@+id/pregunta4"
+                style="@style/style_preguntas"
+                android:text="Cuarta pregunta" />
+
+            <LinearLayout style="@style/style_LinearAgrupa">
+
+                <TextView
+                    android:id="@+id/estadis4A"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 4A" />
+
+                <TextView
+                    android:id="@+id/estadis4B"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 4B" />
+
+                <TextView
+                    android:id="@+id/estadis4C"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 4C" />
+
+                <TextView
+                    android:id="@+id/estadis4D"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 4D" />
+
+            </LinearLayout>
+
+            <!--PREGUNTA CINCO-->
+            <TextView
+                android:id="@+id/pregunta5"
+                style="@style/style_preguntas"
+                android:text="Quinta pregunta" />
+
+            <LinearLayout style="@style/style_LinearAgrupa">
+
+                <TextView
+                    android:id="@+id/estadis5A"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 5A" />
+
+                <TextView
+                    android:id="@+id/estadis5B"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 5B" />
+
+                <TextView
+                    android:id="@+id/estadis5C"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 5C" />
+
+                <TextView
+                    android:id="@+id/estadis5D"
+                    style="@style/style_opciones"
+                    android:text="Estadistica 5D" />
+
+            </LinearLayout>
+
+
+            <Button
+                style="@style/style_botonFondoBlanco"
+                android:text="Atras" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </LinearLayout>

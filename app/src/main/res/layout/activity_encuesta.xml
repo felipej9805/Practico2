@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/colorBlanco"
     android:orientation="vertical"
     android:padding="8dp">
 
@@ -15,210 +15,184 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                style="@style/style_titulos"
+                android:text="PREGUNTAS" />
+
             <!-- PREGUNTA 1-->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Primera pregunta"
-                android:textSize="20sp" />
+                style="@style/style_preguntas"
+                android:text="Primera pregunta" />
 
             <RadioGroup
-                android:id="@+id/pregunta1"
+                android:id="@+id/opcionesP1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/resp_1A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta1" />
+                style="@style/style_opciones"
+                android:text="respuesta1A" />
 
             <RadioButton
                 android:id="@+id/resp_1B"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta2" />
+                style="@style/style_opciones"
+                android:text="respuesta1B" />
 
             <RadioButton
                 android:id="@+id/resp_1C"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta3"
-
-                />
+                style="@style/style_opciones"
+                android:text="respuesta1C" />
 
             <RadioButton
                 android:id="@+id/resp_1D"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta4"
-
-                />
+                style="@style/style_opciones"
+                android:text="respuesta1D" />
 
             <!--PREGUNTA 2-->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Segunda pregunta"
-                android:textSize="20sp" />
+                style="@style/style_preguntas"
+                android:text="Segunda pregunta" />
 
             <RadioGroup
-                android:id="@+id/pregunta2"
+                android:id="@+id/opcionesP2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/resp_2A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/style_opciones"
                 android:onClick="selectItem"
-                android:text="respuesta1" />
+                android:text="respuesta2A" />
 
             <RadioButton
                 android:id="@+id/resp_2B"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/style_opciones"
                 android:onClick="selectItem"
-                android:text="respuesta2" />
+                android:text="respuesta2B"
+                />
 
             <RadioButton
                 android:id="@+id/resp_2C"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/style_opciones"
                 android:onClick="selectItem"
-                android:text="respuesta3" />
+                android:text="respuesta2C"
+                />
 
             <RadioButton
                 android:id="@+id/resp_2D"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/style_opciones"
                 android:onClick="selectItem"
-                android:text="respuesta4" />
-
+                android:text="respuesta2D"
+                />
 
             <!--TERCERA PREGUNTA-->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/style_preguntas"
                 android:text="Tercera pregunta"
-                android:textSize="20sp" />
-
-            <RadioGroup
-                android:id="@+id/pregunta3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:textSize="20sp"
                 />
 
-            <RadioButton
-                android:id="@+id/resp_3A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta1" />
-
-            <RadioButton
-                android:id="@+id/resp_3B"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta2" />
-
-            <RadioButton
-                android:id="@+id/resp_3C"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta3"
-
-                />
-
-            <RadioButton
-                android:id="@+id/resp_3D"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta4" />
-
-
-            <!--CUARTA PREGUNTA-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cuarta pregunta"
-                android:textSize="20sp" />
-
             <RadioGroup
-                android:id="@+id/pregunta4"
+                android:id="@+id/opcionesP3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
+            <RadioButton
+                android:id="@+id/resp_3A"
+                style="@style/style_opciones"
+                android:text="respuesta3A" />
+
+            <RadioButton
+                android:id="@+id/resp_3B"
+                style="@style/style_opciones"
+                android:text="respuesta3B" />
+
+            <RadioButton
+                android:id="@+id/resp_3C"
+                style="@style/style_opciones"
+                android:text="respuesta3C" />
+
+            <RadioButton
+                android:id="@+id/resp_3D"
+                style="@style/style_opciones"
+                android:text="respuesta3D" />
+
+            <!--CUARTA PREGUNTA-->
+            <TextView
+                style="@style/style_preguntas"
+                android:text="Cuarta pregunta"
+                />
+            <RadioGroup
+                android:id="@+id/opcionesP4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/resp_4A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta1" />
+                android:text="respuesta4A"
+                style="@style/style_opciones"
+                />
 
             <RadioButton
                 android:id="@+id/resp_4B"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta2" />
+                android:text="respuesta4B"
+                style="@style/style_opciones"
+                />
 
             <RadioButton
                 android:id="@+id/resp_4C"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta3" />
+                android:text="respuesta4C"
+                style="@style/style_opciones"
+                />
 
             <RadioButton
                 android:id="@+id/resp_4D"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:onClick="selectItem"
-                android:text="respuesta4" />
+                android:text="respuesta4D"
+                style="@style/style_opciones"
+                />
 
             <!--PREGUNTA CINCO-->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="Quinta pregunta"
-                android:textSize="20sp" />
-
+                style="@style/style_preguntas"
+                />
             <RadioGroup
-                android:id="@+id/group5"
+                android:id="@+id/opcionesP5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/resp_5A"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta1" />
+                android:text="respuesta5A"
+                style="@style/style_opciones"
+                />
 
             <RadioButton
                 android:id="@+id/resp_5B"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta2" />
+                android:text="respuesta5B"
+                style="@style/style_opciones"
+                />
 
             <RadioButton
                 android:id="@+id/resp_5C"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta3" />
+                android:text="respuesta5C"
+                style="@style/style_opciones"
+                />
 
             <RadioButton
                 android:id="@+id/resp_5D"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="respuesta4" />
+                android:text="respuesta5D"
+                style="@style/style_opciones"
+                />
 
             <Button
-                android:id="@+id/bt_enviar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
                 android:onClick="onClick_Submit"
-                android:text="Enviar" />
-
+                android:text="Enviar"
+                android:id="@+id/bt_enviar"
+                style="@style/style_botonFondoBlanco"
+                />
         </LinearLayout>
 
     </ScrollView>
