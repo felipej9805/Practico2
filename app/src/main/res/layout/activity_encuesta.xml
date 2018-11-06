@@ -188,6 +188,14 @@
                 style="@style/style_opciones"
                 />
 
+
+            <TextView
+                android:id="@+id/prueba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="---------"
+                android:textSize="30dp"/>
+
             <Button
 
                 android:text="Enviar"
