@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_encuesta"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBlanco"
@@ -188,7 +189,7 @@
                 />
 
             <Button
-                android:onClick="onClick_Submit"
+
                 android:text="Enviar"
                 android:id="@+id/bt_enviar"
                 style="@style/style_botonFondoBlanco"
