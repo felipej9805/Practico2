@@ -18,12 +18,12 @@
 
             <TextView
                 style="@style/style_titulos"
-                android:text="PREGUNTAS" />
+                android:text="Bienvenido" />
 
             <!-- PREGUNTA 1-->
             <TextView
                 style="@style/style_preguntas"
-                android:text="Primera pregunta" />
+                android:text="¿Qué te gusta cocinar?" />
 
             <RadioGroup
                 android:id="@+id/opcionesP1"
@@ -33,27 +33,27 @@
             <RadioButton
                 android:id="@+id/resp_1A"
                 style="@style/style_opciones"
-                android:text="respuesta1A" />
+                android:text="Postres y dulces" />
 
             <RadioButton
                 android:id="@+id/resp_1B"
                 style="@style/style_opciones"
-                android:text="respuesta1B" />
+                android:text="Pastas y pizzas" />
 
             <RadioButton
                 android:id="@+id/resp_1C"
                 style="@style/style_opciones"
-                android:text="respuesta1C" />
+                android:text="verduras y ensaladas" />
 
             <RadioButton
                 android:id="@+id/resp_1D"
                 style="@style/style_opciones"
-                android:text="respuesta1D" />
+                android:text="Carnes y asados" />
 
             <!--PREGUNTA 2-->
             <TextView
                 style="@style/style_preguntas"
-                android:text="Segunda pregunta" />
+                android:text="¿Con que frecuencia cocinas?" />
 
             <RadioGroup
                 android:id="@+id/opcionesP2"
@@ -63,34 +63,30 @@
             <RadioButton
                 android:id="@+id/resp_2A"
                 style="@style/style_opciones"
-                android:onClick="selectItem"
-                android:text="respuesta2A" />
+                android:text="Siempre" />
 
             <RadioButton
                 android:id="@+id/resp_2B"
                 style="@style/style_opciones"
-                android:onClick="selectItem"
-                android:text="respuesta2B"
+                android:text="Muchas veces"
                 />
 
             <RadioButton
                 android:id="@+id/resp_2C"
                 style="@style/style_opciones"
-                android:onClick="selectItem"
-                android:text="respuesta2C"
+                android:text="Regularmente"
                 />
 
             <RadioButton
                 android:id="@+id/resp_2D"
                 style="@style/style_opciones"
-                android:onClick="selectItem"
-                android:text="respuesta2D"
+                android:text="Pocas veces"
                 />
 
             <!--TERCERA PREGUNTA-->
             <TextView
                 style="@style/style_preguntas"
-                android:text="Tercera pregunta"
+                android:text="¿Qué fuente utilizas para preparar una receta?"
                 android:textSize="20sp"
                 />
 
@@ -102,27 +98,27 @@
             <RadioButton
                 android:id="@+id/resp_3A"
                 style="@style/style_opciones"
-                android:text="respuesta3A" />
+                android:text="Recetario" />
 
             <RadioButton
                 android:id="@+id/resp_3B"
                 style="@style/style_opciones"
-                android:text="respuesta3B" />
+                android:text="Youtube" />
 
             <RadioButton
                 android:id="@+id/resp_3C"
                 style="@style/style_opciones"
-                android:text="respuesta3C" />
+                android:text="Redes sociales" />
 
             <RadioButton
                 android:id="@+id/resp_3D"
                 style="@style/style_opciones"
-                android:text="respuesta3D" />
+                android:text="Una persona" />
 
             <!--CUARTA PREGUNTA-->
             <TextView
                 style="@style/style_preguntas"
-                android:text="Cuarta pregunta"
+                android:text="Normalmente, ¿usted cuanto tiempo invierte en la preparación de una receta?"
                 />
             <RadioGroup
                 android:id="@+id/opcionesP4"
@@ -131,32 +127,32 @@
 
             <RadioButton
                 android:id="@+id/resp_4A"
-                android:text="respuesta4A"
+                android:text="Más de 2 horas"
                 style="@style/style_opciones"
                 />
 
             <RadioButton
                 android:id="@+id/resp_4B"
-                android:text="respuesta4B"
+                android:text="2 horas"
                 style="@style/style_opciones"
                 />
 
             <RadioButton
                 android:id="@+id/resp_4C"
-                android:text="respuesta4C"
+                android:text="1 hora"
                 style="@style/style_opciones"
                 />
 
             <RadioButton
                 android:id="@+id/resp_4D"
                 android:onClick="selectItem"
-                android:text="respuesta4D"
+                android:text="Menos de 1 hora"
                 style="@style/style_opciones"
                 />
 
             <!--PREGUNTA CINCO-->
             <TextView
-                android:text="Quinta pregunta"
+                android:text="¿Qué sensación tiene usted al cocinar?"
                 style="@style/style_preguntas"
                 />
             <RadioGroup
@@ -166,25 +162,25 @@
 
             <RadioButton
                 android:id="@+id/resp_5A"
-                android:text="respuesta5A"
+                android:text="Felicidad"
                 style="@style/style_opciones"
                 />
 
             <RadioButton
                 android:id="@+id/resp_5B"
-                android:text="respuesta5B"
+                android:text="Tristeza"
                 style="@style/style_opciones"
                 />
 
             <RadioButton
                 android:id="@+id/resp_5C"
-                android:text="respuesta5C"
+                android:text="Ansiedad"
                 style="@style/style_opciones"
                 />
 
             <RadioButton
                 android:id="@+id/resp_5D"
-                android:text="respuesta5D"
+                android:text="Placer"
                 style="@style/style_opciones"
                 />
 
