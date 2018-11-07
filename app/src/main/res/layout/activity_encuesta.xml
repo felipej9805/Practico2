@@ -28,27 +28,30 @@
             <RadioGroup
                 android:id="@+id/opcionesP1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/resp_1A"
-                style="@style/style_opciones"
-                android:text="Postres y dulces" />
+                <RadioButton
+                    android:id="@+id/resp_1A"
+                    style="@style/style_opciones"
+                    android:text="Postres y dulces" />
 
-            <RadioButton
-                android:id="@+id/resp_1B"
-                style="@style/style_opciones"
-                android:text="Pastas y pizzas" />
+                <RadioButton
+                    android:id="@+id/resp_1B"
+                    style="@style/style_opciones"
+                    android:text="Pastas y pizzas" />
 
-            <RadioButton
-                android:id="@+id/resp_1C"
-                style="@style/style_opciones"
-                android:text="verduras y ensaladas" />
+                <RadioButton
+                    android:id="@+id/resp_1C"
+                    style="@style/style_opciones"
+                    android:text="verduras y ensaladas" />
 
-            <RadioButton
-                android:id="@+id/resp_1D"
-                style="@style/style_opciones"
-                android:text="Carnes y asados" />
+                <RadioButton
+                    android:id="@+id/resp_1D"
+                    style="@style/style_opciones"
+                    android:text="Carnes y asados" />
+
+            </RadioGroup>
+
 
             <!--PREGUNTA 2-->
             <TextView
@@ -58,131 +61,132 @@
             <RadioGroup
                 android:id="@+id/opcionesP2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/resp_2A"
-                style="@style/style_opciones"
-                android:text="Siempre" />
 
-            <RadioButton
-                android:id="@+id/resp_2B"
-                style="@style/style_opciones"
-                android:text="Muchas veces"
-                />
+                <RadioButton
+                    android:id="@+id/resp_2A"
+                    style="@style/style_opciones"
+                    android:text="Siempre" />
 
-            <RadioButton
-                android:id="@+id/resp_2C"
-                style="@style/style_opciones"
-                android:text="Regularmente"
-                />
+                <RadioButton
+                    android:id="@+id/resp_2B"
+                    style="@style/style_opciones"
+                    android:text="Muchas veces" />
 
-            <RadioButton
-                android:id="@+id/resp_2D"
-                style="@style/style_opciones"
-                android:text="Pocas veces"
-                />
+                <RadioButton
+                    android:id="@+id/resp_2C"
+                    style="@style/style_opciones"
+                    android:text="Regularmente" />
+
+                <RadioButton
+                    android:id="@+id/resp_2D"
+                    style="@style/style_opciones"
+                    android:text="Pocas veces" />
+
+            </RadioGroup>
+
 
             <!--TERCERA PREGUNTA-->
             <TextView
                 style="@style/style_preguntas"
                 android:text="¿Qué fuente utilizas para preparar una receta?"
-                android:textSize="20sp"
-                />
+                android:textSize="20sp" />
 
             <RadioGroup
                 android:id="@+id/opcionesP3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/resp_3A"
-                style="@style/style_opciones"
-                android:text="Recetario" />
+                <RadioButton
+                    android:id="@+id/resp_3A"
+                    style="@style/style_opciones"
+                    android:text="Recetario" />
 
-            <RadioButton
-                android:id="@+id/resp_3B"
-                style="@style/style_opciones"
-                android:text="Youtube" />
+                <RadioButton
+                    android:id="@+id/resp_3B"
+                    style="@style/style_opciones"
+                    android:text="Youtube" />
 
-            <RadioButton
-                android:id="@+id/resp_3C"
-                style="@style/style_opciones"
-                android:text="Redes sociales" />
+                <RadioButton
+                    android:id="@+id/resp_3C"
+                    style="@style/style_opciones"
+                    android:text="Redes sociales" />
 
-            <RadioButton
-                android:id="@+id/resp_3D"
-                style="@style/style_opciones"
-                android:text="Una persona" />
+                <RadioButton
+                    android:id="@+id/resp_3D"
+                    style="@style/style_opciones"
+                    android:text="Una persona" />
+            </RadioGroup>
+
 
             <!--CUARTA PREGUNTA-->
             <TextView
                 style="@style/style_preguntas"
-                android:text="Normalmente, ¿usted cuanto tiempo invierte en la preparación de una receta?"
-                />
+                android:text="Normalmente, ¿usted cuanto tiempo invierte en la preparación de una receta?" />
+
             <RadioGroup
                 android:id="@+id/opcionesP4"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/resp_4A"
-                android:text="Más de 2 horas"
-                style="@style/style_opciones"
-                />
+                <RadioButton
+                    android:id="@+id/resp_4A"
+                    style="@style/style_opciones"
+                    android:text="Más de 2 horas" />
 
-            <RadioButton
-                android:id="@+id/resp_4B"
-                android:text="2 horas"
-                style="@style/style_opciones"
-                />
+                <RadioButton
+                    android:id="@+id/resp_4B"
+                    style="@style/style_opciones"
+                    android:text="2 horas" />
 
-            <RadioButton
-                android:id="@+id/resp_4C"
-                android:text="1 hora"
-                style="@style/style_opciones"
-                />
+                <RadioButton
+                    android:id="@+id/resp_4C"
+                    style="@style/style_opciones"
+                    android:text="1 hora" />
 
-            <RadioButton
-                android:id="@+id/resp_4D"
-                android:onClick="selectItem"
-                android:text="Menos de 1 hora"
-                style="@style/style_opciones"
-                />
+                <RadioButton
+                    android:id="@+id/resp_4D"
+                    style="@style/style_opciones"
+                    android:onClick="selectItem"
+                    android:text="Menos de 1 hora" />
+
+
+            </RadioGroup>
+
 
             <!--PREGUNTA CINCO-->
             <TextView
-                android:text="¿Qué sensación tiene usted al cocinar?"
                 style="@style/style_preguntas"
-                />
+                android:text="¿Qué sensación tiene usted al cocinar?" />
+
             <RadioGroup
                 android:id="@+id/opcionesP5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:id="@+id/resp_5A"
-                android:text="Felicidad"
-                style="@style/style_opciones"
-                />
+                <RadioButton
+                    android:id="@+id/resp_5A"
+                    style="@style/style_opciones"
+                    android:text="Felicidad" />
 
-            <RadioButton
-                android:id="@+id/resp_5B"
-                android:text="Tristeza"
-                style="@style/style_opciones"
-                />
+                <RadioButton
+                    android:id="@+id/resp_5B"
+                    style="@style/style_opciones"
+                    android:text="Tristeza" />
 
-            <RadioButton
-                android:id="@+id/resp_5C"
-                android:text="Ansiedad"
-                style="@style/style_opciones"
-                />
+                <RadioButton
+                    android:id="@+id/resp_5C"
+                    style="@style/style_opciones"
+                    android:text="Ansiedad" />
 
-            <RadioButton
-                android:id="@+id/resp_5D"
-                android:text="Placer"
-                style="@style/style_opciones"
-                />
+                <RadioButton
+                    android:id="@+id/resp_5D"
+                    style="@style/style_opciones"
+                    android:text="Placer" />
+
+
+            </RadioGroup>
 
 
             <TextView
@@ -190,14 +194,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="---------"
-                android:textSize="30dp"/>
+                android:textSize="30dp" />
 
             <Button
 
-                android:text="Enviar"
                 android:id="@+id/bt_enviar"
                 style="@style/style_botonFondoBlanco"
-                />
+                android:text="Enviar" />
         </LinearLayout>
 
     </ScrollView>
