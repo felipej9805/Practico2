@@ -31,7 +31,9 @@
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="400dp"
+
+                />
 
 
 
@@ -45,7 +47,10 @@
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="400dp"
+
+
+                />
 
             <!--TERCERA PREGUNTA-->
             <TextView
@@ -56,7 +61,10 @@
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="400dp"
+
+
+                />
 
 
             <!--CUARTA PREGUNTA-->
@@ -67,7 +75,9 @@
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="400dp"
+
+                />
 
 
             <!--PREGUNTA CINCO-->
@@ -79,10 +89,15 @@
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p5"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="400dp"
+
+
+                />
 
 
             <Button
+                android:id="@+id/btn_atras"
+                android:onClick="onClick_Atras"
                 style="@style/style_botonFondoBlanco"
                 android:text="Atras" />
 

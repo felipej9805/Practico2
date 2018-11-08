@@ -1,10 +1,13 @@
 package com.example.felipe.practico2;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
@@ -33,6 +36,8 @@ public class Estadistica extends AppCompatActivity {
     FirebaseAuth auth;
     FirebaseDatabase db;
 
+    Button btn_atras;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +53,8 @@ public class Estadistica extends AppCompatActivity {
         db = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
 
+        btn_atras = findViewById(R.id.btn_atras);
+
         cargar_graficas();
     }
 
@@ -55,10 +62,11 @@ public class Estadistica extends AppCompatActivity {
 
         //Grafica pregunta 1
         Description desc1 = new Description();
-        desc1.setText("Pregunta 1");
-        desc1.setTextSize(15);
+        desc1.setTextSize(20);
         torta_p1.setDescription(desc1);
         torta_p1.setRotationEnabled(true);
+
+
         torta_p1.setUsePercentValues(true);
         torta_p1.setDragDecelerationFrictionCoef(0.95f);
         torta_p1.setDrawHoleEnabled(true);
@@ -68,8 +76,7 @@ public class Estadistica extends AppCompatActivity {
 
         //Grafica pregunta 2
         Description desc2 = new Description();
-        desc2.setText("Pregunta 2");
-        desc2.setTextSize(15);
+        desc2.setTextSize(20);
         torta_p2.setDescription(desc2);
         torta_p2.setRotationEnabled(true);
         torta_p2.setUsePercentValues(true);
@@ -79,8 +86,7 @@ public class Estadistica extends AppCompatActivity {
 
         //Grafica pregunta 3
         Description desc3 = new Description();
-        desc3.setText("Pregunta 3");
-        desc3.setTextSize(15);
+        desc3.setTextSize(20);
         torta_p3.setDescription(desc3);
         torta_p3.setRotationEnabled(true);
         torta_p3.setUsePercentValues(true);
@@ -90,8 +96,7 @@ public class Estadistica extends AppCompatActivity {
 
         //Grafica pregunta 4
         Description desc4 = new Description();
-        desc4.setText("Pregunta 4");
-        desc4.setTextSize(15);
+        desc4.setTextSize(20);
         torta_p4.setDescription(desc4);
         torta_p4.setRotationEnabled(true);
         torta_p4.setUsePercentValues(true);
@@ -102,7 +107,7 @@ public class Estadistica extends AppCompatActivity {
         //Grafica pregunta 5
         Description desc5 = new Description();
         desc5.setText("Pregunta 5");
-        desc5.setTextSize(15);
+        desc5.setTextSize(20);
         torta_p5.setDescription(desc5);
         torta_p5.setRotationEnabled(true);
         torta_p5.setUsePercentValues(true);
@@ -110,36 +115,36 @@ public class Estadistica extends AppCompatActivity {
         torta_p5.setDrawHoleEnabled(true);
         torta_p5.setTransparentCircleRadius(61f);
 
-
-        ArrayList<PieEntry> valoresY = new ArrayList<>();
-        valoresY.add(new PieEntry(34f, "Colombia"));
-        valoresY.add(new PieEntry(23f, "Argentina"));
-        valoresY.add(new PieEntry(14f, "Peru"));
-        valoresY.add(new PieEntry(35, "Brasil"));
-        valoresY.add(new PieEntry(40, "Usa"));
-        valoresY.add(new PieEntry(23, "Mexico"));
-
-        PieDataSet dataset = new PieDataSet(valoresY, "Paises");
-        dataset.setSliceSpace(3f);
-        dataset.setSelectionShift(5f);
-        dataset.setColors(ColorTemplate.JOYFUL_COLORS);
-
-        PieData data = new PieData(dataset);
-        data.setValueTextSize(10f);
-        data.setValueTextColor(Color.YELLOW);
-
-
-        torta_p1.setData(data);
-
-
 /**
- cargarInfo(torta_p1, "pregunta1");
- cargarInfo(torta_p2, "pregunta2");
- cargarInfo(torta_p3, "pregunta3");
- cargarInfo(torta_p4, "pregunta4");
- cargarInfo(torta_p5, "pregunta5");
+ ArrayList<PieEntry> valoresY = new ArrayList<>();
+ valoresY.add(new PieEntry(34f, "Colombia"));
+ valoresY.add(new PieEntry(23f, "Argentina"));
+ valoresY.add(new PieEntry(14f, "Peru"));
+ valoresY.add(new PieEntry(35, "Brasil"));
+ valoresY.add(new PieEntry(40, "Usa"));
+ valoresY.add(new PieEntry(23, "Mexico"));
 
+ PieDataSet dataset = new PieDataSet(valoresY, "Paises");
+ dataset.setSliceSpace(3f);
+ dataset.setSelectionShift(5f);
+ dataset.setColors(ColorTemplate.JOYFUL_COLORS);
+
+ PieData data = new PieData(dataset);
+ data.setValueTextSize(10f);
+ data.setValueTextColor(Color.YELLOW);
+
+
+ torta_p1.setData(data);
  */
+
+
+        cargarInfo(torta_p1, "pregunta1");
+        cargarInfo(torta_p2, "pregunta2");
+        cargarInfo(torta_p3, "pregunta3");
+        cargarInfo(torta_p4, "pregunta4");
+        cargarInfo(torta_p5, "pregunta5");
+
+
     }
 
 
@@ -169,32 +174,35 @@ public class Estadistica extends AppCompatActivity {
                 ArrayList<PieEntry> entradasY = new ArrayList<>();
                 ArrayList<String> entradasX = new ArrayList<>();
 
-                for (int i = 0; i < entradasY.size(); i++) {
+                for (int i = 0; i < datosY.size(); i++) {
                     entradasY.add(new PieEntry(datosY.get(i), datosX.get(i)));
+                    Log.e(">>entY", datosY.get(i) + " - " + datosX.get(i));
 
                 }
 
                 for (int i = 0; i < datosX.size(); i++) {
                     entradasX.add(datosX.get(i));
+                    Log.e(">>entX", datosX.get(i));
+
                 }
 
                 PieDataSet pieDataSet = new PieDataSet(entradasY, "Respuestas");
                 pieDataSet.setSliceSpace(2);
                 pieDataSet.setValueTextSize(12);
 
+/**
+ ArrayList<Integer> colores = new ArrayList<>();
+ colores.add(Color.GRAY);
+ colores.add(Color.BLUE);
+ colores.add(Color.RED);
+ colores.add(Color.GREEN);
+ colores.add(Color.YELLOW);
+ colores.add(Color.CYAN);
+ colores.add(Color.YELLOW);
+ colores.add(Color.MAGENTA);
 
-                ArrayList<Integer> colores = new ArrayList<>();
-                colores.add(Color.GRAY);
-                colores.add(Color.BLUE);
-                colores.add(Color.RED);
-                colores.add(Color.GREEN);
-                colores.add(Color.YELLOW);
-                colores.add(Color.CYAN);
-                colores.add(Color.YELLOW);
-                colores.add(Color.MAGENTA);
-
-
-                pieDataSet.setColors(colores);
+ */
+                pieDataSet.setColors(ColorTemplate.JOYFUL_COLORS);
 
 
                 Legend legend = torta.getLegend();
@@ -211,6 +219,13 @@ public class Estadistica extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    public void onClick_Atras(View v) {
+        Intent intent = new Intent(Estadistica.this, MainActivity.class);
+        startActivity(intent);
+        finish();
 
     }
 }
