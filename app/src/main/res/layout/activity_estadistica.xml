@@ -21,34 +21,18 @@
                 android:text="ESTADISTICAS" />
 
             <!-- PREGUNTA 1-->
+
+
             <TextView
                 android:id="@+id/pregunta1"
                 style="@style/style_preguntas"
                 android:text="Primera pregunta" />
 
-            <LinearLayout style="@style/style_LinearAgrupa">
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/torta_p1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
-                <TextView
-                    android:id="@+id/estadis1A"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 1A" />
-
-                <TextView
-                    android:id="@+id/estadis1B"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 1B" />
-
-                <TextView
-                    android:id="@+id/estadis1C"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 1C" />
-
-                <TextView
-                    android:id="@+id/estadis1D"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 1D" />
-
-            </LinearLayout>
 
 
             <!--PREGUNTA 2-->
@@ -57,30 +41,11 @@
                 style="@style/style_preguntas"
                 android:text="Segunda pregunta" />
 
-            <LinearLayout style="@style/style_LinearAgrupa">
 
-                <TextView
-                    android:id="@+id/estadis2A"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 2A" />
-
-                <TextView
-                    android:id="@+id/estadis2B"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 2B" />
-
-                <TextView
-                    android:id="@+id/estadis2C"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 2C" />
-
-                <TextView
-                    android:id="@+id/estadis2D"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 2D" />
-
-            </LinearLayout>
-
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/torta_p2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
             <!--TERCERA PREGUNTA-->
             <TextView
@@ -88,28 +53,10 @@
                 style="@style/style_preguntas"
                 android:text="Tercera pregunta" />
 
-            <LinearLayout style="@style/style_LinearAgrupa">
-
-                <TextView
-                    android:id="@+id/estadis3A"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 3A" />
-
-                <TextView
-                    android:id="@+id/estadis3B"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 3B" />
-
-                <TextView
-                    android:id="@+id/estadis3C"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 3C" />
-
-                <TextView
-                    android:id="@+id/estadis3D"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 3D" />
-            </LinearLayout>
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/torta_p3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
 
             <!--CUARTA PREGUNTA-->
@@ -117,30 +64,11 @@
                 android:id="@+id/pregunta4"
                 style="@style/style_preguntas"
                 android:text="Cuarta pregunta" />
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/torta_p4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-            <LinearLayout style="@style/style_LinearAgrupa">
-
-                <TextView
-                    android:id="@+id/estadis4A"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 4A" />
-
-                <TextView
-                    android:id="@+id/estadis4B"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 4B" />
-
-                <TextView
-                    android:id="@+id/estadis4C"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 4C" />
-
-                <TextView
-                    android:id="@+id/estadis4D"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 4D" />
-
-            </LinearLayout>
 
             <!--PREGUNTA CINCO-->
             <TextView
@@ -148,29 +76,10 @@
                 style="@style/style_preguntas"
                 android:text="Quinta pregunta" />
 
-            <LinearLayout style="@style/style_LinearAgrupa">
-
-                <TextView
-                    android:id="@+id/estadis5A"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 5A" />
-
-                <TextView
-                    android:id="@+id/estadis5B"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 5B" />
-
-                <TextView
-                    android:id="@+id/estadis5C"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 5C" />
-
-                <TextView
-                    android:id="@+id/estadis5D"
-                    style="@style/style_opciones"
-                    android:text="Estadistica 5D" />
-
-            </LinearLayout>
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/torta_p5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
 
             <Button
