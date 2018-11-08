@@ -9,11 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/imgencuesta"
-        android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
         />
 
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FOODGRAM"
+        style="@style/style_titulos"
+        android:textColor="@color/colorBlanco"
+        />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -61,81 +61,74 @@ public class Estadistica extends AppCompatActivity {
     private void cargar_graficas() {
 
         //Grafica pregunta 1
+
+
         Description desc1 = new Description();
+        desc1.setText("");
         desc1.setTextSize(20);
         torta_p1.setDescription(desc1);
         torta_p1.setRotationEnabled(true);
-
-
         torta_p1.setUsePercentValues(true);
         torta_p1.setDragDecelerationFrictionCoef(0.95f);
         torta_p1.setDrawHoleEnabled(true);
-        torta_p1.setTransparentCircleRadius(61f);
+        torta_p1.setTransparentCircleRadius(50f);
         torta_p1.setHoleColor(Color.WHITE);
+        torta_p1.setHoleRadius(40f);
 
 
         //Grafica pregunta 2
         Description desc2 = new Description();
         desc2.setTextSize(20);
+        desc2.setText("");
         torta_p2.setDescription(desc2);
         torta_p2.setRotationEnabled(true);
         torta_p2.setUsePercentValues(true);
         torta_p2.setDragDecelerationFrictionCoef(0.95f);
         torta_p2.setDrawHoleEnabled(true);
-        torta_p2.setTransparentCircleRadius(61f);
+        torta_p2.setTransparentCircleRadius(50f);
+        torta_p2.setHoleRadius(40f);
+
 
         //Grafica pregunta 3
         Description desc3 = new Description();
         desc3.setTextSize(20);
+        desc3.setText("");
         torta_p3.setDescription(desc3);
         torta_p3.setRotationEnabled(true);
         torta_p3.setUsePercentValues(true);
         torta_p3.setDragDecelerationFrictionCoef(0.95f);
         torta_p3.setDrawHoleEnabled(true);
-        torta_p3.setTransparentCircleRadius(61f);
+        torta_p3.setTransparentCircleRadius(50f);
+        torta_p3.setHoleRadius(40f);
+
 
         //Grafica pregunta 4
         Description desc4 = new Description();
         desc4.setTextSize(20);
+        desc4.setText("");
+
         torta_p4.setDescription(desc4);
         torta_p4.setRotationEnabled(true);
         torta_p4.setUsePercentValues(true);
         torta_p4.setDragDecelerationFrictionCoef(0.95f);
         torta_p4.setDrawHoleEnabled(true);
-        torta_p4.setTransparentCircleRadius(61f);
+        torta_p4.setTransparentCircleRadius(50f);
+        torta_p4.setHoleRadius(40f);
+
 
         //Grafica pregunta 5
         Description desc5 = new Description();
         desc5.setText("Pregunta 5");
+        desc5.setText("");
+
         desc5.setTextSize(20);
         torta_p5.setDescription(desc5);
         torta_p5.setRotationEnabled(true);
         torta_p5.setUsePercentValues(true);
         torta_p5.setDragDecelerationFrictionCoef(0.95f);
         torta_p5.setDrawHoleEnabled(true);
-        torta_p5.setTransparentCircleRadius(61f);
-
-/**
- ArrayList<PieEntry> valoresY = new ArrayList<>();
- valoresY.add(new PieEntry(34f, "Colombia"));
- valoresY.add(new PieEntry(23f, "Argentina"));
- valoresY.add(new PieEntry(14f, "Peru"));
- valoresY.add(new PieEntry(35, "Brasil"));
- valoresY.add(new PieEntry(40, "Usa"));
- valoresY.add(new PieEntry(23, "Mexico"));
-
- PieDataSet dataset = new PieDataSet(valoresY, "Paises");
- dataset.setSliceSpace(3f);
- dataset.setSelectionShift(5f);
- dataset.setColors(ColorTemplate.JOYFUL_COLORS);
-
- PieData data = new PieData(dataset);
- data.setValueTextSize(10f);
- data.setValueTextColor(Color.YELLOW);
-
-
- torta_p1.setData(data);
- */
+        torta_p5.setTransparentCircleRadius(50f);
+        torta_p5.setHoleRadius(40f);
 
 
         cargarInfo(torta_p1, "pregunta1");

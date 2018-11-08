@@ -148,7 +148,6 @@
                 <RadioButton
                     android:id="@+id/resp_4D"
                     style="@style/style_opciones"
-                    android:onClick="selectItem"
                     android:text="Menos de 1 hora" />
 
 

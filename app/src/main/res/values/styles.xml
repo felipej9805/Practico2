@@ -48,7 +48,7 @@
 
     <!--Estilo para boton fondo rojo-letra blanca-->
     <style name="style_botonFondoBlanco">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@drawable/redondear_rojo</item>
         <item name="android:textAlignment">center</item>
