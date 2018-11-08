@@ -2,7 +2,6 @@ package com.example.felipe.practico2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -15,9 +14,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.gson.Gson;
 
-import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -94,53 +91,40 @@ public class Encuesta extends AppCompatActivity {
 
                 //Obtenemos las referencias de la base de datos
 
-                DatabaseReference rf1 = db.getReference().child("Pregunta1");
-                DatabaseReference rf2 = db.getReference().child("Pregunta2");
-                DatabaseReference rf3 = db.getReference().child("Pregunta3");
-                DatabaseReference rf4 = db.getReference().child("Pregunta4");
-                DatabaseReference rf5 = db.getReference().child("Pregunta5");
+                DatabaseReference rf1 = db.getReference().child("pregunta1");
+                DatabaseReference rf2 = db.getReference().child("pregunta2");
+                DatabaseReference rf3 = db.getReference().child("pregunta3");
+                DatabaseReference rf4 = db.getReference().child("pregunta4");
+                DatabaseReference rf5 = db.getReference().child("pregunta5");
+
+                int value = 1;
 
                 //Generamos una nueva referencia a la respuesta de la pregunta 1
 
                 if (resp_p1.getId() == R.id.resp_1A) {
                     DatabaseReference reference = rf1.child("A").push();
-
-                    try {
-                        Gson gson = new Gson();
-                        Pregunta nuevo = new Pregunta("1","A");
-
-
-                        String json = WEBUtilDomi.JsonByPOSTrequest(PREGUNTA1, gson.toJson(nuevo));
-
-
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                //Se ejecutara en el hilo principal
-
-                            }
-                        });
-
-
-                    } catch (IOException ex) {
-
-
-                    }
-
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p1.getId() == R.id.resp_1B) {
                     DatabaseReference reference = rf1.child("B").push();
+                    reference.setValue(value);
+                    value ++;
 
                 }
 
                 if (resp_p1.getId() == R.id.resp_1C) {
                     DatabaseReference reference = rf1.child("C").push();
+                    reference.setValue(value);
+                    value ++;
 
                 }
 
                 if (resp_p1.getId() == R.id.resp_1D) {
                     DatabaseReference reference = rf1.child("D").push();
+                    reference.setValue(value);
+                    value ++;
 
                 }
 
@@ -148,74 +132,107 @@ public class Encuesta extends AppCompatActivity {
 
                 if (resp_p2.getId() == R.id.resp_2A) {
                     DatabaseReference reference = rf2.child("A").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p2.getId() == R.id.resp_2B) {
                     DatabaseReference reference = rf2.child("B").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p2.getId() == R.id.resp_2C) {
                     DatabaseReference reference = rf2.child("C").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p2.getId() == R.id.resp_2D) {
                     DatabaseReference reference = rf2.child("D").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 //Generamos una nueva referencia a la respuesta de la pregunta 3
 
                 if (resp_p3.getId() == R.id.resp_3A) {
                     DatabaseReference reference = rf3.child("A").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p3.getId() == R.id.resp_3B) {
                     DatabaseReference reference = rf3.child("B").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p3.getId() == R.id.resp_3C) {
                     DatabaseReference reference = rf3.child("C").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p3.getId() == R.id.resp_3D) {
                     DatabaseReference reference = rf3.child("D").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 //Generamos una nueva referencia a la respuesta de la pregunta 4
 
                 if (resp_p4.getId() == R.id.resp_4A) {
                     DatabaseReference reference = rf4.child("A").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p4.getId() == R.id.resp_4B) {
                     DatabaseReference reference = rf4.child("B").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p4.getId() == R.id.resp_4C) {
                     DatabaseReference reference = rf4.child("C").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p4.getId() == R.id.resp_4D) {
                     DatabaseReference reference = rf4.child("D").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 //Generamos una nueva referencia a la respuesta de la pregunta 5
 
                 if (resp_p5.getId() == R.id.resp_5A) {
                     DatabaseReference reference = rf5.child("A").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p5.getId() == R.id.resp_5B) {
                     DatabaseReference reference = rf5.child("B").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p5.getId() == R.id.resp_5C) {
                     DatabaseReference reference = rf5.child("C").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
                 if (resp_p5.getId() == R.id.resp_5D) {
                     DatabaseReference reference = rf5.child("D").push();
+                    reference.setValue(value);
+                    value ++;
                 }
 
+                Toast.makeText(getApplicationContext(), "Encuesta realizada con éxito", Toast.LENGTH_LONG).show();
 
                 finish();
             }
