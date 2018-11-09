@@ -55,156 +55,59 @@ public class Estadistica extends AppCompatActivity {
 
         btn_atras = findViewById(R.id.btn_atras);
 
-        cargar_graficas();
+        crear_grafica_torta(torta_p1,"pregunta1");
+        crear_grafica_torta(torta_p2,"pregunta2");
+        crear_grafica_torta(torta_p3,"pregunta3");
+        crear_grafica_torta(torta_p4,"pregunta4");
+        crear_grafica_torta(torta_p5,"pregunta5");
     }
 
-    private void cargar_graficas() {
+    private void crear_grafica_torta(PieChart torta, String childname) {
 
-        //Grafica pregunta 1
-
+        //Se crea una grafica de torta
 
         Description desc1 = new Description();
         desc1.setText("");
         desc1.setTextSize(20);
-        torta_p1.setDescription(desc1);
-        torta_p1.setRotationEnabled(true);
-        torta_p1.setUsePercentValues(true);
-        torta_p1.setDragDecelerationFrictionCoef(0.95f);
-        torta_p1.setDrawHoleEnabled(true);
-        torta_p1.setTransparentCircleRadius(50f);
-        torta_p1.setHoleColor(Color.WHITE);
-        torta_p1.setHoleRadius(40f);
+        torta.setDescription(desc1);
+        torta.setRotationEnabled(true);
+        torta.setUsePercentValues(true);
+        torta.setDragDecelerationFrictionCoef(0.95f);
+        torta.setDrawHoleEnabled(true);
+        torta.setTransparentCircleRadius(50f);
+        torta.setHoleColor(Color.WHITE);
+        torta.setHoleRadius(40f);
 
-
-        //Grafica pregunta 2
-        Description desc2 = new Description();
-        desc2.setTextSize(20);
-        desc2.setText("");
-        torta_p2.setDescription(desc2);
-        torta_p2.setRotationEnabled(true);
-        torta_p2.setUsePercentValues(true);
-        torta_p2.setDragDecelerationFrictionCoef(0.95f);
-        torta_p2.setDrawHoleEnabled(true);
-        torta_p2.setTransparentCircleRadius(50f);
-        torta_p2.setHoleRadius(40f);
-
-
-        //Grafica pregunta 3
-        Description desc3 = new Description();
-        desc3.setTextSize(20);
-        desc3.setText("");
-        torta_p3.setDescription(desc3);
-        torta_p3.setRotationEnabled(true);
-        torta_p3.setUsePercentValues(true);
-        torta_p3.setDragDecelerationFrictionCoef(0.95f);
-        torta_p3.setDrawHoleEnabled(true);
-        torta_p3.setTransparentCircleRadius(50f);
-        torta_p3.setHoleRadius(40f);
-
-
-        //Grafica pregunta 4
-        Description desc4 = new Description();
-        desc4.setTextSize(20);
-        desc4.setText("");
-
-        torta_p4.setDescription(desc4);
-        torta_p4.setRotationEnabled(true);
-        torta_p4.setUsePercentValues(true);
-        torta_p4.setDragDecelerationFrictionCoef(0.95f);
-        torta_p4.setDrawHoleEnabled(true);
-        torta_p4.setTransparentCircleRadius(50f);
-        torta_p4.setHoleRadius(40f);
-
-
-        //Grafica pregunta 5
-        Description desc5 = new Description();
-        desc5.setText("Pregunta 5");
-        desc5.setText("");
-
-        desc5.setTextSize(20);
-        torta_p5.setDescription(desc5);
-        torta_p5.setRotationEnabled(true);
-        torta_p5.setUsePercentValues(true);
-        torta_p5.setDragDecelerationFrictionCoef(0.95f);
-        torta_p5.setDrawHoleEnabled(true);
-        torta_p5.setTransparentCircleRadius(50f);
-        torta_p5.setHoleRadius(40f);
-
-
-        cargarInfo(torta_p1, "pregunta1");
-        cargarInfo(torta_p2, "pregunta2");
-        cargarInfo(torta_p3, "pregunta3");
-        cargarInfo(torta_p4, "pregunta4");
-        cargarInfo(torta_p5, "pregunta5");
-
+        // se carga la informacion de la base datos y llena la torta
+        cargarInfo(torta, childname);
 
     }
 
 
     public void cargarInfo(final PieChart torta, String childName) {
 
-        final ArrayList<Float> datosY = new ArrayList<>();
         final ArrayList<String> datosX = new ArrayList<>();
-
+        final ArrayList<Float> datosY = new ArrayList<>();
         final DatabaseReference reference = db.getReference().child(childName);
 
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                datosY.clear();
+
                 datosX.clear();
+                datosY.clear();
 
                 Iterable<DataSnapshot> hijos = dataSnapshot.getChildren();
 
+                //se leen los datos de la base de datos y se cargan en los respectivos arreglos
                 for (DataSnapshot hijo : hijos) {
                     datosY.add(new Float(hijo.getChildrenCount()));
                     datosX.add(hijo.getKey());
-
-                    Log.e(">>p1", "onDataChange: " + hijo.getKey() + " values:" + hijo.getChildrenCount());
-
                 }
 
-                ArrayList<PieEntry> entradasY = new ArrayList<>();
-                ArrayList<String> entradasX = new ArrayList<>();
+                //Se llena la torta
+                llenarTorta(datosX, datosY, torta);
 
-                for (int i = 0; i < datosY.size(); i++) {
-                    entradasY.add(new PieEntry(datosY.get(i), datosX.get(i)));
-                    Log.e(">>entY", datosY.get(i) + " - " + datosX.get(i));
-
-                }
-
-                for (int i = 0; i < datosX.size(); i++) {
-                    entradasX.add(datosX.get(i));
-                    Log.e(">>entX", datosX.get(i));
-
-                }
-
-                PieDataSet pieDataSet = new PieDataSet(entradasY, "Respuestas");
-                pieDataSet.setSliceSpace(2);
-                pieDataSet.setValueTextSize(12);
-
-/**
- ArrayList<Integer> colores = new ArrayList<>();
- colores.add(Color.GRAY);
- colores.add(Color.BLUE);
- colores.add(Color.RED);
- colores.add(Color.GREEN);
- colores.add(Color.YELLOW);
- colores.add(Color.CYAN);
- colores.add(Color.YELLOW);
- colores.add(Color.MAGENTA);
-
- */
-                pieDataSet.setColors(ColorTemplate.JOYFUL_COLORS);
-
-
-                Legend legend = torta.getLegend();
-                legend.setForm(Legend.LegendForm.CIRCLE);
-                legend.setPosition(Legend.LegendPosition.LEFT_OF_CHART);
-
-                PieData pieData = new PieData(pieDataSet);
-                torta.setData(pieData);
-                torta.invalidate();
             }
 
             @Override
@@ -212,6 +115,38 @@ public class Estadistica extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void llenarTorta(ArrayList<String> datosX, ArrayList<Float> datosY, PieChart torta) {
+
+        //LLenamos la torta
+        ArrayList<PieEntry> entradasY = new ArrayList<>();
+        ArrayList<String> entradasX = new ArrayList<>();
+
+        for (int i = 0; i < datosY.size(); i++) {
+            entradasY.add(new PieEntry(datosY.get(i), datosX.get(i)));
+        }
+
+        for (int i = 0; i < datosX.size(); i++) {
+            entradasX.add(datosX.get(i));
+        }
+
+        // Aplicamos las caracteristicas de la torta y la leyenda
+        PieDataSet pieDataSet = new PieDataSet(entradasY, "Respuestas");
+        pieDataSet.setSliceSpace(2);
+        pieDataSet.setValueTextSize(12);
+
+        //Aplicamos los colores de la torta
+        pieDataSet.setColors(ColorTemplate.JOYFUL_COLORS);
+
+        Legend legend = torta.getLegend();
+        legend.setForm(Legend.LegendForm.CIRCLE);
+        legend.setPosition(Legend.LegendPosition.LEFT_OF_CHART);
+
+        PieData pieData = new PieData(pieDataSet);
+        torta.setData(pieData);
+        torta.invalidate();
 
     }
 

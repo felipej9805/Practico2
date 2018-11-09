@@ -150,7 +150,6 @@
                     style="@style/style_opciones"
                     android:text="Menos de 1 hora" />
 
-
             </RadioGroup>
 
 
@@ -184,16 +183,7 @@
                     style="@style/style_opciones"
                     android:text="Placer" />
 
-
             </RadioGroup>
-
-
-            <TextView
-                android:id="@+id/prueba"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="---------"
-                android:textSize="30dp" />
 
             <Button
 

@@ -18,83 +18,64 @@
 
             <TextView
                 style="@style/style_titulos"
-                android:text="ESTADISTICAS" />
+                android:text="ESTADÍSTICAS" />
 
             <!-- PREGUNTA 1-->
-
-
             <TextView
                 android:id="@+id/pregunta1"
                 style="@style/style_preguntas"
-                android:text="Primera pregunta" />
+                android:text="Pregunta 1 : ¿Qué te gusta cocinar?" />
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p1"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-
-                />
-
-
+                android:layout_height="400dp" />
 
             <!--PREGUNTA 2-->
             <TextView
                 android:id="@+id/pregunta2"
                 style="@style/style_preguntas"
-                android:text="Segunda pregunta" />
-
+                android:text="Pregunta 2: ¿Con que frecuencia cocinas?" />
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p2"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-
-
-                />
+                android:layout_height="400dp" />
 
             <!--TERCERA PREGUNTA-->
             <TextView
                 android:id="@+id/pregunta3"
                 style="@style/style_preguntas"
-                android:text="Tercera pregunta" />
+                android:text="Pregunta 3: ¿Qué fuente utilizas para preparar una receta?" />
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p3"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-
-
-                />
-
+                android:layout_height="400dp" />
 
             <!--CUARTA PREGUNTA-->
             <TextView
                 android:id="@+id/pregunta4"
                 style="@style/style_preguntas"
-                android:text="Cuarta pregunta" />
+                android:text="Pregunta 4: Normalmente, ¿usted cuanto tiempo invierte en la preparación de una receta?" />
+
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p4"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
-
-                />
-
+                android:layout_height="400dp" />
 
             <!--PREGUNTA CINCO-->
             <TextView
                 android:id="@+id/pregunta5"
                 style="@style/style_preguntas"
-                android:text="Quinta pregunta" />
+                android:text="Pregunta 5: ¿Qué sensación tiene usted al cocinar?" />
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/torta_p5"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="400dp" />
 
-
-                />
-
-
+            <!--BOTÓN-->
             <Button
                 android:id="@+id/btn_atras"
                 android:onClick="onClick_Atras"
